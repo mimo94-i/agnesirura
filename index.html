@@ -60,17 +60,40 @@
 <body>
 
 	<!-- Navigation -->
-	<header>
-    <nav>
-      <ul>	
-			<li><a href="#section5">Contact</a></li>
-			<li><a href="#section4">Client Feedbacks</a></li>
-			<li><a href="#section3">My Strengths</a></li>
-			<li><a href="#section2">About Me</a></li>
-			<li><a href="#section1">Introduction</a></li>			
-	</ul>
-    </nav>
-  </header>
+    <div class="menu-bar">
+        <button class="toggle-button">☰</button> <!-- Hamburger icon -->
+        <div class="menu" id="menu">
+            <a href="#section1">Introduction</a>
+            <a href="#section2">About Me</a>
+            <a href="#section3">My Strengths</a>
+            <a href="#section4">Client Feedback</a>
+            <a href="#section5">Contact</a>
+        </div>
+    </div>
+  	<!-- Navigation Ending -->
+	
+<script>
+        const toggleButton = document.querySelector('.toggle-button');
+        const menu = document.getElementById('menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Smooth scroll to section on menu item click
+        document.querySelectorAll('.menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                menu.classList.remove('active'); // Close menu after click
+            });
+        });
+    </script>
+
+		</div>
+	</nav>
   	<!-- Navigation Ending -->
 	
 <script>
