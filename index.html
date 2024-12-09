@@ -8,50 +8,54 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<title>AGNES IRURA</title>
-	 <style>
-header {
+    <style>
+.menu-bar {
   position: fixed;
   top: 0;
-  width: 100%;
-  background-color: rgb(40 41 13);
-  height: 50px;
-  z-index: 999;
+  right: 0; /* Position it to the right */
+  padding: 10px;
+  width: 46px; /* Adjust the width as needed */
+  z-index: 1000;
+
 }
-
-
-nav {
-
-background-color: rgb(40 41 13);
-  height: 100%;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-nav li {
-  float: right;
-}
-
-nav li a {
-  display: block;
-  color: #fff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a:hover {
-  background-color: #964B00;
-}
-
-.content {
-  margin-top: 80px; /* Adjust for header height */
-}
-</style>
+        .toggle-button {
+            background-color: #666; /* Darker grey */
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px;
+            outline: none;
+        }
+        .menu {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            background-color: #c18f59;
+            position: absolute;
+            right: 0;
+            width: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			margin-left: 50px;
+        }
+        .menu.active {
+            display: flex; /* Show menu */
+			margin-right: 20px;
+        }
+        .menu a {
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            text-align: center;
+        }
+        .menu a:hover {
+            background-color: #ddd; /* Darken on hover */
+        }
+        section {
+            padding: 100px 20px; /* Add some top padding for the sections */
+            margin-top: -45px; /* Leave space for the fixed menu */
+        }
+		
+    </style>
 </head>
 <body>
 
